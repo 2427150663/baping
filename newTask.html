@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>霸屏新闻跟评点赞系统</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <div class="logo">
+                <div class="bg">
+
+                </div>
+            </div>
+            <div class="title">
+                霸屏新闻跟评点赞系统
+            </div>
+        </div>
+        <div class="right">
+            <div class="rLeft">
+                广安市委网信办
+            </div>
+            <div class="rRight">
+                <span>李阿龙</span>
+                <span class="iconfont icon-xia"></span>
+                <div class="out hide">
+                    <span class="iconfont icon-tingzhi"></span><span>退出</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav" onclick="window.location.href='index.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>首页</span>
+        </div>
+        <div class="nav active" onclick="window.location.href='newTask.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>新建任务</span>
+        </div>
+        <div class="nav" onclick="window.location.href='taskManage.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>任务管理</span>
+        </div>
+        <div class="nav" onclick="window.location.href='set.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>系统信息</span>
+        </div>
+    </nav>
+    <section>
+        <div class="ConTitle">
+            新建任务
+        </div>
+        <div class="new newSearch">
+            <div class="search">
+                <input type="text" placeholder="请输入网址">
+                <div class="btn">采集评论</div>
+            </div>
+            <div class="platform">
+                <div class="plTitle">
+                    <div class="left">
+                        支持平台：
+                    </div>
+                    <div class="right">
+                        <img src="img/platform1.png" alt="">
+                        <img src="img/platform2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="loading hide">
+                <img src="img/loading.gif" alt="">
+            </div>
+        </div>
+        <div class="newCON hide">
+            <div class="ConBtm">
+                <div class="BtmTitle detail">
+                    <div class="left">
+                        <span class="icon"></span>
+                        任务详情
+                    </div>
+                </div>
+                <div class="detailTOP">
+                    <div class="detailCon">
+                        <div class="ConTOPTitle">
+                            <a href="">
+                                广安市市委书记携带图赴珠三角地区招商引资,解决现有地区经济问题 <span class="iconfont icon-lianjie"></span>
+                            </a>
+                        </div>
+                        <div class="lie">
+                            <div class="left">
+                                任务名称：
+                            </div>
+                            <div class="right">
+                                <input type="text" value="为市委书记执行点赞" placeholder="请输入任务名称">
+                            </div>
+                        </div>
+                        <div class="lie">
+                            <div class="left">
+                                是否霸屏：
+                            </div>
+                            <div class="right">
+                                <div class="switch">
+                                    <div class="radio"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lie last">
+                            <div class="left">
+                                新闻跟评
+                            </div>
+                            <div class="right liLast">
+                                <span>Tips</span>:霸屏选择跟评最多不超过15条.
+                            </div>
+                        </div>
+                        <div class="table  detailTbale tabPage newTask">
+                            <table cellspacing="0" cellpadding="0" id="tableList">
+                                <tr>
+                                    <td>选择</td>
+                                    <td>跟评内容</td>
+                                    <td>发评昵称</td>
+                                    <td>当前点赞数</td>
+                                    <td class="last">
+                                        <input type="text" id="sumGiveLove" oninput="value=value.replace(/[^\d]/g,'')"
+                                            value="0">
+                                        点赞总数/次
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="iconfont icon-weixuanzhong"></span>
+                                    </td>
+                                    <td>
+                                        为你点赞李书记为你点赞，李书记为你点赞，李书记！
+                                    </td>
+                                    <td>
+                                        尹磊
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td class="last">
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="page">
+                                <div class="total">
+                                    共 <span id="total">800</span> 条
+                                </div>
+                                <div class="pageIndex">
+                                    <span class="iconfont icon-zuo"></span>
+                                    <div id="pageIndex">
+                                    </div>
+                                    <span class="iconfont icon-you"></span>
+                                </div>
+                                <div class="pageSize">
+                                    <select name="" id="pageSize">
+                                        <option selected value="10">10条/页</option>
+                                        <option value="20">20条/页</option>
+                                        <option value="30">30条/页</option>
+                                        <option value="40">40条/页</option>
+                                        <option value="50">50条/页</option>
+                                    </select>
+                                </div>
+                                <div class="go">
+                                    跳至<input type="text" value="1" oninput="value=value.replace(/[^\d]/g,'')">页
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                            <div class="yulan">
+                                <div class="btn" id="preview">
+                                    <span class="iconfont icon-yulan"></span>预 览
+                                </div>
+                                <div class="btn hide" id="back">
+                                    <span class="iconfont icon-fanhui"></span>返 回
+                                </div>
+                                <div class="btn" id="start">
+                                    <span class="iconfont icon-unif054"></span>开始任务
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="prompt hide" id="prompt">
+        <span>√</span>开始任务成功！
+    </div>
+    <footer>
+        康奈网络科技@2019
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>霸屏新闻跟评点赞系统</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <div class="logo">
+                <div class="bg">
+
+                </div>
+            </div>
+            <div class="title">
+                霸屏新闻跟评点赞系统
+            </div>
+        </div>
+        <div class="right">
+            <div class="rLeft">
+                广安市委网信办
+            </div>
+            <div class="rRight">
+                <span>李阿龙</span>
+                <span class="iconfont icon-xia"></span>
+                <div class="out hide">
+                    <span class="iconfont icon-tingzhi"></span><span>退出</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav" onclick="window.location.href='index.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>首页</span>
+        </div>
+        <div class="nav" onclick="window.location.href='newTask.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>新建任务</span>
+        </div>
+        <div class="nav" onclick="window.location.href='taskManage.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>任务管理</span>
+        </div>
+        <div class="nav active" onclick="window.location.href='set.html'">
+            <div class="icon">
+                <div class="bg">
+
+                </div>
+            </div>
+            <span>系统信息</span>
+        </div>
+    </nav>
+    <section>
+        <div class="ConTitle">
+            系统信息
+        </div>
+        <div class="setCon">
+            <div class="conTop">
+                <div class="TOPleft">
+                    <div class="topLeft">
+                        <img src="img/s1.png" alt="" width="174px">
+                    </div>
+                    <div class="topRight">
+                        <div class="trTOP">
+                            广安市委网信办正式版
+                        </div>
+                        <div class="trBtm">
+                            系统版本
+                        </div>
+                    </div>
+                </div>
+                <div class="Topright">
+                    <div class="topLeft">
+                        <canvas id="echart" width="195px" height="195px">
+
+                        </canvas>
+                    </div>
+                    <div class="topRight">
+                        <div class="trTOP">
+                            2019-08-20(剩余<span>132</span>天)
+                        </div>
+                        <div class="trBtm">
+                            到期日期
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conBtm">
+                <div class="lie">
+                    <img src="img/s2.png" alt="" width="164px">
+                    <div class="btmTop">乌鲁木齐公安局</div>
+                    <div class="btmBtm">
+                        所在机构
+                    </div>
+                </div>
+                <div class="lie">
+                    <img src="img/s3.png" alt="" width="138px">
+                    <div class="btmTop">李阿龙</div>
+                    <div class="btmBtm">
+                        客服专员
+                    </div>
+                </div>
+                <div class="lie">
+                    <img src="img/s4.png" alt="" width="164px">
+                    <div class="btmTop">19082317723</div>
+                    <div class="btmBtm">
+                        联系方式
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        康奈网络科技@2019
+    </footer>
+</body>
+<script src="js/echarts.js"></script>
+<script src="js/main.js"></script>
+
+</html>
