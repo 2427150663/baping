@@ -10,55 +10,46 @@ function selected(sel) {
 }
 //仪表盘
 function drawLine(my, day) {
-    let myChart = echarts.init(my);
-    let surplusDay = 80 - day;
-    myChart.setOption({
-        series: [{
-            name: '',
-            type: 'gauge',
-            textStyle: {
-                color: "#999",
-                fontSize: 18
-            },
+    /** @type {HTMLCanvasElement} */
+    console.log(day)
+    let canvas = my.querySelector("canvas");
+    let zheng = my.querySelector(".zheng");
+    let date = my.querySelector(".date");
+    let time = new Date().toLocaleDateString().split("/");
+    date.innerHTML = time[1] + "/" + time[2];
+    let zhi = 176 - (day);
+    //最小角度
+    if(zhi<-40){
+        zhi = -40;
+    }
+    if(zhi>228){
+        zhi = 228;
+    }
+    zheng.style.transform = `rotate(${zhi}deg)`;
+    let total = $("section .setCon .conTop .Topright .topRight .trTOP");
+    if (day < 0) {
+        total.innerHTML = `2019-08-20(过期<span>${day * -1}</span>天)`
+    }
+    let ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(95, 107, 64, Math.PI * 2.0, Math.PI * 0.7, true);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'rgba(93, 124, 242, 1)';
+    ctx.stroke();
+    ctx.closePath();
 
-            clockwise: true,
-            axisLine: {            // 坐标轴线  
-                lineStyle: {       // 属性lineStyle控制线条样式  
-                    width: 12,
-                    color: [[0.8, '#5D7CF2'], [1, '#dddddd']]
-                }
-            },
-            axisLabel: {            // 坐标轴小标记
-                show: false,
-            },
-            min: "0",
-            max: "100",
-            splitLine: { //分割线样式（及10、20等长线样式）
-                length: 0,
-                lineStyle: { // 属性lineStyle控制线条样式
-                    width: 0
-                }
-            },
-            axisTick: { //刻度线样式（及短线样式）
-                length: 0
-            },
-            pointer: {
-                width: 4, //指针的宽度
-                length: "70%", //指针长度，按照半圆半径的百分比
-            },
-            detail: {
-                formatter: '8/20',
-                textStyle: {       // 其余属性默认使用全局文本样式
-                    fontWeight: 'bolder',
-                    fontSize: 18
-                }
-            },
-            data: [{
-                value: surplusDay
-            }]
-        }]
+    ctx.beginPath();
+    ctx.arc(95, 107, 64, Math.PI * 2.3, Math.PI * 2, true);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'rgba(152, 159, 195, 0.4)';
+    ctx.stroke();
+    ctx.closePath();
 
-    });
+    ctx.beginPath();
+    ctx.arc(95, 107, 10, 0, Math.PI * 2, true);
+    ctx.fillStyle = "rgba(152, 159, 195, 0.4)";
+    ctx.fill();
+    ctx.closePath();
 }
 //账号退出
 function accountOut() {
@@ -249,8 +240,7 @@ class set {
             //结束时间
             time_end,
             //时间差
-            time_server_client,
-            timerID;
+            time_server_client;
         //结束时间
         time_end = new Date("2019/08/20");
         time_end = time_end.getTime();
@@ -272,15 +262,10 @@ class set {
         var time_now = new Date();
         time_now = time_now.getTime() + time_server_client;
         time_distance = time_end - time_now;
-        if (time_distance > 0) {
-            int_day = Math.floor(time_distance / 86400000)
-            str_time = time_distance % 86400000 == 0 ? int_day : int_day + 1;
-            timer.innerHTML = str_time;
-            this.surplusDay = str_time;
-        } else {
-            timer.innerHTML = timer.innerHTML;
-            clearTimeout(timerID)
-        }
+        int_day = Math.floor(time_distance / 86400000)
+        str_time = time_distance % 86400000 == 0 ? int_day : int_day + 1;
+        timer.innerHTML = str_time;
+        this.surplusDay = str_time;
     }
 }
 //新建任务

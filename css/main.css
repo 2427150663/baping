@@ -891,6 +891,7 @@ section .setCon .conTop .Topright {
 section .setCon .conTop .Topright .topLeft {
   width: 40%;
   justify-content: center;
+  min-width: 195px;
 }
 
 section .setCon .conTop .Topright .topRight {
@@ -1190,4 +1191,101 @@ section .setCon .conTop .TOPleft, section .setCon .conTop .Topright, section .se
 
 .prompt.hide {
   display: none;
+}
+
+#echart canvas {
+  position: absolute;
+  display: block;
+}
+
+#echart {
+  width: 195px;
+  height: 195px;
+  position: relative;
+  text-align: center;
+}
+
+#echart ul li {
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: rgba(152, 159, 195, 0.4);
+}
+
+#echart ul li:nth-child(1) {
+  top: 67px;
+  left: -5px;
+  transform: rotate(-41deg);
+}
+
+#echart ul li:nth-child(2) {
+  top: 35px;
+  left: -14px;
+  transform: rotate(-3deg);
+}
+
+#echart ul li:nth-child(3) {
+  top: 2px;
+  left: 0px;
+  transform: rotate(44deg);
+}
+
+#echart ul li:nth-child(4) {
+  top: -2px;
+  left: 60px;
+  transform: rotate(133deg);
+}
+
+#echart ul li:nth-child(5) {
+  top: 33px;
+  left: 80px;
+  transform: rotate(173deg);
+}
+
+#echart ul li:nth-child(6) {
+  top: 67px;
+  left: 71px;
+  transform: rotate(38deg);
+}
+
+#echart ul {
+  width: 79px;
+  height: 79px;
+  position: absolute;
+  top: 68px;
+  left: 55px;
+  border-radius: 50%;
+}
+
+#echart .date {
+  font-size: 16px;
+  font-family: DINAlternate-Bold;
+  font-weight: bold;
+  color: rgba(85, 91, 123, 1);
+  line-height: 19px;
+  margin-top: 150px;
+}
+
+#echart .zheng {
+  width: 40px;
+  height: 8px;
+  background: linear-gradient(180deg, rgba(150, 179, 250, 1) 0%, rgba(108, 138, 244, 1) 74%, rgba(93, 124, 242, 1) 100%);
+  position: absolute;
+  border-radius: 100% 50% 50% 100%;
+  top: 103px;
+  left: 59px;
+  transform-origin: 36px 4px;
+  transition: .5s ease-in-out;
+  transform: rotate(-40deg);
+}
+
+#echart .zheng::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  right: 4px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
 }
